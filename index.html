@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datapine Test App</title>
+    <base href="/" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <ul class="menu">
+        <li><a ui-sref="testModule">Test Module</a></li>
+    </ul>
+
+    <div ui-view></div>
+
+    <script src="node_modules/requirejs/require.js" data-main="main.js"></script>
+</body>
+</html>
