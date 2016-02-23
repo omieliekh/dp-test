@@ -3,7 +3,7 @@ define([
 ], function (testModule) {
     'use strict';
 
-    testModule.constant("testModuleConfig", {
+    return testModule.constant("testModuleConfig", {
         pathGetItems: '/some/server/path'
     });
 

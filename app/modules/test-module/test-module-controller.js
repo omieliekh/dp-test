@@ -3,7 +3,7 @@ define([
 ], function (testModule) {
     'use strict';
 
-    testModule.controller('testModuleController', [
+    return testModule.controller('testModuleController', [
         '$scope',
         'testModuleService',
     function (
@@ -14,20 +14,3 @@ define([
     }]);
 
 });
-
-
-
-
-
-
-angular.module('testModule')
-
-.controller('testModuleController', [
-    '$scope',
-    'testModuleService',
-function (
-    $scope,
-    testModuleService
-) {
-
-}]);

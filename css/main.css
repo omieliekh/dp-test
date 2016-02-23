@@ -6122,3 +6122,6 @@ button.close {
 .test-module h3 {
   color: green;
 }
+.another-test-module h3 {
+  color: gold;
+}
