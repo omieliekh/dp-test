@@ -4,8 +4,6 @@ define([
 ], function (app, routes) {
     'use strict';
 
-    console.log('app.directive menu');
-
     return app.directive("menu", [
         '$timeout',
     function (

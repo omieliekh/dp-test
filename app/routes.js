@@ -3,7 +3,9 @@ define([], function () {
 
     return {
         commonDeps: [
-            'app/directives/menu/menu'
+            'app/directives/menu/menu',
+            'app/directives/chart/chart',
+            'app/directives/map/map'
         ],
         routes: [
             {

@@ -1,3 +1,6 @@
 .another-test-module h3 {
-  color: green;
+  color: gold;
+}
+.another-test-module .tile {
+  border: 1ps solid ;
 }

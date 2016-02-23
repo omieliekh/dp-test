@@ -1,20 +1,37 @@
 require.config({
-
-    // alias libraries paths
     paths: {
         'domReady': 'node_modules/domready/ready',
+        'jquery': 'node_modules/jquery/dist/jquery',
         'angular': 'node_modules/angular/angular',
-        'angular-ui-router': 'node_modules/angular-ui-router/release/angular-ui-router'
+        'angular-ui-router': 'node_modules/angular-ui-router/release/angular-ui-router',
+        'highcharts': 'node_modules/highcharts/highcharts',
+        'module-map': 'http://code.highcharts.com/maps/modules/map.js',
+        'world': 'http://code.highcharts.com/mapdata/custom/world.js',
+        'highcharts-ng': 'node_modules/highcharts-ng/dist/highcharts-ng'
     },
 
-    // angular does not support AMD out of the box, put it in a shim
     shim: {
+        'jquery': { exports: 'jquery' },
+
         'angular': {
-            exports: 'angular'
+            exports: 'angular',
+            deps: ['jquery']
         },
+
         'angular-ui-router': {
             exports: 'angular-ui-router',
             deps: ['angular']
+        },
+
+        'module-map': { exports: 'module-map' },
+
+        'world': { exports: 'world' },
+
+        'highcharts': { exports: 'highcharts' },
+
+        'highcharts-ng': {
+            exports: 'highcharts-ng',
+            deps: ['highcharts','module-map','world', 'angular']
         }
     }
 
@@ -25,18 +42,17 @@ require.config({
  */
 define([
     'require',
+    'jquery',
     'angular',
     'app/routes',
     'angular-ui-router',
     'app/app'
-], function (require, angular, routes) {
+], function (require, jquery, angular, routes) {
     'use strict';
 
     require(['domReady'].concat(routes.commonDeps), function (domReady) {
         domReady(function () {
             angular.bootstrap(document, ['app']);
-
-            console.log('render');
         });
     });
 });

@@ -1,11 +1,13 @@
 define([
     'angular',
-    'app/routes'
+    'app/routes',
+    'highcharts-ng'
 ], function (angular, routes) {
     'use strict';
 
     return angular.module('app', [
-        'ui.router'
+        'ui.router',
+        'highcharts-ng'
     ]).config([
         '$locationProvider',
         '$stateProvider',
@@ -20,17 +22,13 @@ define([
 
         routes.routes.forEach(function (route) {
             if (route.deps){
-                route.resolve = {
-                    resolver: ['$q', function($q) {
-                        var defer = $q.defer();
+                route.resolve = ['$q', function($q) {
+                    var defer = $q.defer();
 
-                        require(route.deps, function () {
-                            defer.resolve(arguments);
-                        });
+                    require(route.deps, defer.resolve);
 
-                        return defer.promise;
-                    }]
-                };
+                    return defer.promise;
+                }];
             }
 
             $stateProvider.state(route.state, route);

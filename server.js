@@ -26,7 +26,32 @@ var paths = {
         //cont = cont.replace('</body>', '    '+files.join('\n    ')+'\n</body>');
 
         res.send(cont);
+    },
+
+    '/charts/1': function (req, res) {
+        res.send(
+            fs.readFileSync(ROOT_DIR + 'mocks/chart-1.json', 'utf8')
+        );
+    },
+
+    '/charts/2': function (req, res) {
+        res.send(
+            fs.readFileSync(ROOT_DIR + 'mocks/chart-2.json', 'utf8')
+        );
+    },
+
+    '/charts/3': function (req, res) {
+        res.send(
+            fs.readFileSync(ROOT_DIR + 'mocks/chart-3.json', 'utf8')
+        );
+    },
+
+    '/charts/4': function (req, res) {
+        res.send(
+            fs.readFileSync(ROOT_DIR + 'mocks/chart-4.json', 'utf8')
+        );
     }
+
 };
 
 app.get('/*', function(req, res){
