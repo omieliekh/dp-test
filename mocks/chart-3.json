@@ -90,10 +90,10 @@
                 }
             ],
             "center": [
-                100,
+                80,
                 80
             ],
-            "size": 100,
+            "size": 80,
             "showInLegend": false,
             "dataLabels": {
                 "enabled": false

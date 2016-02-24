@@ -4,7 +4,7 @@ define([
 ], function (angular, app) {
     'use strict';
 
-    return app.directive("square", [
+    return app.directive("responsiveChart", [
         '$window',
         '$timeout',
     function (
@@ -19,7 +19,6 @@ define([
 
                 var initialize = function () {
                     jWindow.on('resize', onWindowResize);
-
                     onWindowResize();
                 };
 
@@ -30,13 +29,9 @@ define([
                         $timeout.cancel(timeout);
 
                         timeout = $timeout(function () {
-                            var h = element.width() * 0.7;
-
-                            if (h > 0){
-                                element.height(h);
-                                element.find('div').height(h);
-                            }
-                        }, 50);
+                            console.log('reflow ', element.find('[data-highcharts-chart]'));
+                            element.find('[data-highcharts-chart]').highcharts().reflow();
+                        }, 400);
 
                     };
                 })();

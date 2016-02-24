@@ -1,4 +1,4 @@
-<div class="chart">
+<div class="chart scalable">
     <div class="form-group">
         <label>Chart type:</label>
         <div class="radio" ng-repeat="type in types">
@@ -16,7 +16,7 @@
 
     <div square></div>
 
-    <div square class="chart-holder">
+    <div square responsive-chart class="chart-holder animated">
         <highchart
             config="config"
         ></highchart>

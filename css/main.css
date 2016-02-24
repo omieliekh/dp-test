@@ -6121,44 +6121,30 @@ button.close {
 }
 .menu {
   display: block;
-  width: 50%;
-  max-width: 500px;
+  width: 100%;
   margin: 0 auto 20px auto;
+  padding: 0;
   font-size: 0;
   text-align: center;
 }
 .menu li {
-  border: 1px solid #eeeeee;
+  border-bottom: 3px solid transparent;
   display: inline-block;
+  width: 33.33333333%;
   font-size: medium;
   margin-right: -1px;
 }
+.menu li.active {
+  border-bottom: 3px solid #d9534f;
+}
 .menu li a {
+  color: #222222;
   text-decoration: none;
   padding: 10px;
-  display: inline-block;
+  display: block;
 }
 .menu li:hover {
   background-color: #eeeeee;
-}
-.chart {
-  position: relative;
-}
-.chart .chart-holder {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  position: absolute;
-  transform: scale(0.5);
-  left: -50%;
-  width: 100%;
-  bottom: -50%;
-}
-.chart .chart-holder:hover {
-  z-index: 2;
-  transform: scale(1);
-  border: 1px solid #eeeeee;
 }
 .test-module h3 {
   color: green;
@@ -6171,9 +6157,67 @@ button.close {
 .text-normal {
   font-weight: normal !important;
 }
+.animated,
+.animated *,
+.animated:before,
+.animated *:before,
+.animated:after,
+.animated *:after {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.scalable {
+  position: relative;
+}
+.scalable .chart-holder {
+  position: absolute;
+  transform: scale(0.5);
+  left: -50%;
+  width: 200%;
+  top: -47px;
+}
+.scalable .chart-holder:hover {
+  z-index: 2;
+  transform: scale(0.8);
+  -webkit-box-shadow: 0 0 0 2px #eeeeee;
+  -moz-box-shadow: 0 0 0 2px #eeeeee;
+  box-shadow: 0 0 0 2px #eeeeee;
+}
+@media (min-width: 992px) {
+  .scalable .chart-holder {
+    top: 30px;
+  }
+  .scalable .chart-holder:hover {
+    transform: scale(1);
+  }
+}
+.scalable.shift-1 .chart-holder:hover,
+.scalable.shift-3 .chart-holder:hover {
+  left: -25%;
+}
+.scalable.shift-2 .chart-holder:hover,
+.scalable.shift-4 .chart-holder:hover {
+  left: -75%;
+}
+@media (min-width: 992px) {
+  .scalable.shift-1 .chart-holder:hover {
+    left: 0;
+  }
+  .scalable.shift-2 .chart-holder:hover {
+    left: -25%;
+  }
+  .scalable.shift-3 .chart-holder:hover {
+    left: -75%;
+  }
+  .scalable.shift-4 .chart-holder:hover {
+    left: -100%;
+  }
+}
 .highcharts-container {
   height: auto !important;
-  min-height: 200px;
+  min-height: 150px;
 }
 .highcharts-container .highcharts-background {
   fill: #fafafa;

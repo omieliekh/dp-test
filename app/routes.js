@@ -4,6 +4,7 @@ define([], function () {
     return {
         commonDeps: [
             'app/directives/menu/menu',
+            'app/directives/responsive-chart/responsive-chart',
             'app/directives/square/square',
             'app/directives/chart/chart',
             'app/directives/map/map'

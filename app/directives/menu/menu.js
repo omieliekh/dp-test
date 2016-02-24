@@ -5,9 +5,9 @@ define([
     'use strict';
 
     return app.directive("menu", [
-        '$timeout',
+        '$location',
     function (
-        $timeout
+        $location
     ) {
         return {
             restrict: 'E',
@@ -17,6 +17,11 @@ define([
             controller: function ($scope, $element, $attrs) {
 
                 $scope.routes = routes;
+                $scope.path = $location.path();
+
+                $scope.$on("$locationChangeSuccess",function(e) {
+                    $scope.path = $location.path();
+                });
 
                 $scope.$on('$destroy', function(){
 
