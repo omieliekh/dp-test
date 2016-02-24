@@ -46,9 +46,9 @@ var paths = {
         );
     },
 
-    '/charts/4': function (req, res) {
+    '/maps/1': function (req, res) {
         res.send(
-            fs.readFileSync(ROOT_DIR + 'mocks/chart-4.json', 'utf8')
+            fs.readFileSync(ROOT_DIR + 'mocks/map-1.json', 'utf8')
         );
     }
 

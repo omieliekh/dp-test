@@ -1,6 +1,24 @@
-<div style="min-height: 400px;">
-    <highchart
-        id="chart1"
-        config="config"
-    ></highchart>
+<div class="chart">
+    <div class="form-group">
+        <label>Chart type:</label>
+        <div class="radio" ng-repeat="type in types">
+            <label class="text-normal">
+                <input
+                    type="radio"
+                    name="optionsRadios-{{id}}"
+                    value="{{type.value}}"
+                    ng-model="config.options.chart.type"
+                >
+                {{type.label}}
+            </label>
+        </div>
+    </div>
+
+    <div square></div>
+
+    <div square class="chart-holder">
+        <highchart
+            config="config"
+        ></highchart>
+    </div>
 </div>

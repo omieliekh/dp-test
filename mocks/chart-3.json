@@ -47,7 +47,6 @@
             ]
         },
         {
-            "type": "column",
             "name": "Joe",
             "data": [
                 4,

@@ -5,8 +5,8 @@ require.config({
         'angular': 'node_modules/angular/angular',
         'angular-ui-router': 'node_modules/angular-ui-router/release/angular-ui-router',
         'highcharts': 'node_modules/highcharts/highcharts',
-        'module-map': 'http://code.highcharts.com/maps/modules/map.js',
-        'world': 'http://code.highcharts.com/mapdata/custom/world.js',
+        'module-map': 'http://code.highcharts.com/maps/modules/map',
+        'world': 'http://code.highcharts.com/mapdata/custom/world',
         'highcharts-ng': 'node_modules/highcharts-ng/dist/highcharts-ng'
     },
 
@@ -23,9 +23,15 @@ require.config({
             deps: ['angular']
         },
 
-        'module-map': { exports: 'module-map' },
+        'module-map': {
+            exports: 'module-map',
+            deps: ['highcharts']
+        },
 
-        'world': { exports: 'world' },
+        'world': {
+            exports: 'world',
+            deps: ['highcharts']
+        },
 
         'highcharts': { exports: 'highcharts' },
 

@@ -4,6 +4,7 @@ define([], function () {
     return {
         commonDeps: [
             'app/directives/menu/menu',
+            'app/directives/square/square',
             'app/directives/chart/chart',
             'app/directives/map/map'
         ],
@@ -26,14 +27,14 @@ define([], function () {
                 ]
             },
             {
-                state: 'anotherTestModule',
-                title: 'Another Test Module',
-                url: "/another-test-module",
-                templateUrl: "app/modules/another-test-module/another-test-module.html",
+                state: 'chartsModule',
+                title: 'Charts',
+                url: "/charts-module",
+                templateUrl: "app/modules/charts-module/charts-module.html",
                 deps: [
-                    'app/modules/another-test-module/another-test-module',
-                    'app/modules/another-test-module/another-test-module-config',
-                    'app/modules/another-test-module/another-test-module-controller'
+                    'app/modules/charts-module/charts-module',
+                    'app/modules/charts-module/charts-module-config',
+                    'app/modules/charts-module/charts-module-controller'
                 ]
             }
         ]
