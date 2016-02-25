@@ -37,7 +37,7 @@ require.config({
 
         'highcharts-ng': {
             exports: 'highcharts-ng',
-            deps: ['highcharts','module-map','world', 'angular']
+            deps: ['highcharts', 'module-map','world', 'angular']
         }
     }
 

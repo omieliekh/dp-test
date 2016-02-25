@@ -1,4 +1,9 @@
 {
+    "options": {
+        "chart": {
+            "type": "column"
+        }
+    },
     "title": {
         "text": "Combination chart"
     },

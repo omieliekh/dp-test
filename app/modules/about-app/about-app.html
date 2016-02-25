@@ -1,0 +1,27 @@
+<div class="about-app">
+    <div class="container outer-indent-bottom-lg">
+            <h3>Used technologies</h3>
+        <ul>
+            <li>AngularJS
+            <li>Angular UI Router
+            <li>RequireJS
+            <li>NPM
+            <li>Grunt
+            <li>LESS
+            <li>Highcharts-ng and Highcharts
+        </ul>
+        <h3>Tricks</h3>
+        <p>To make AMD approach really work, we need to trigger module loading exactly before showing its page.</p>
+        <p>Also none of module's files should be loaded before that.</p>
+        <p>So, I've implemented advanced route processing.</p>
+        <p>Angular allows us to wait for promise dependencies to be resoled</p>
+        <p>So module's files was defined as dependencies for module's route and magic happened :)</p>
+
+        <h3>Details</h3>
+        <p>For charts, <strong>highcharts-ng</strong> directive wrapper was used.</p>
+        <p>CSS was compiled with help of LESS compiler.</p>
+        <p>To simplify development, Grunt build manager was used with <strong>grunt-contrib-less</strong> to run LESS</p>
+        <p>and <strong>grunt-contrib-watch</strong> to automatically recompile CSS on every less-file change</p>
+    </div>
+
+</div>

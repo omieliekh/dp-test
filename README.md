@@ -1,13 +1,14 @@
 # INSTALLATION
 
 * Install [NodeJS](https://nodejs.org/en/download/) 
-* Run `npm install -g grunt`
+* Open console
+* Go to project's root folder
 * Run `npm install`
-* Run `grunt`
-* Open another CLI window and run `node server.js`
+* Run `node server.js`
+* Open your browser and type [http://localhost:8333](http://localhost:8333)
 
-Links:
+# Development
 
-http://stackoverflow.com/questions/18591966/inject-module-dynamically-only-if-required
-https://github.com/ifyio/angularjs-lazy-loading-with-requirejs
-https://github.com/nikospara/angular-require-lazy
+* Open another console
+* Install global packages `npm install -g grunt-cli less`
+* Run `grunt`, to compile css and recompile it on every file change

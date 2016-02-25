@@ -11,31 +11,25 @@ define([], function () {
         ],
         routes: [
             {
-                state: 'main',
-                title: 'Main Page',
-                url: "/",
-                template: "<h1>Main page goes here</h1>"
-            },
-            {
-                state: 'testModule',
-                title: 'Test Module',
-                url: "/test-module",
-                templateUrl: "app/modules/test-module/test-module.html",
-                deps: [
-                    'app/modules/test-module/test-module',
-                    'app/modules/test-module/test-module-config',
-                    'app/modules/test-module/test-module-controller'
-                ]
-            },
-            {
                 state: 'chartsModule',
-                title: 'Charts',
-                url: "/charts-module",
+                title: 'Home Page',
+                url: "/",
                 templateUrl: "app/modules/charts-module/charts-module.html",
                 deps: [
                     'app/modules/charts-module/charts-module',
                     'app/modules/charts-module/charts-module-config',
                     'app/modules/charts-module/charts-module-controller'
+                ]
+            },
+            {
+                state: 'aboutApp',
+                title: 'About this application',
+                url: "/about-app",
+                templateUrl: "app/modules/about-app/about-app.html",
+                deps: [
+                    'app/modules/about-app/about-app',
+                    'app/modules/about-app/about-app-config',
+                    'app/modules/about-app/about-app-controller'
                 ]
             }
         ]

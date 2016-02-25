@@ -29,7 +29,6 @@ define([
                         $timeout.cancel(timeout);
 
                         timeout = $timeout(function () {
-                            console.log('reflow ', element.find('[data-highcharts-chart]'));
                             element.find('[data-highcharts-chart]').highcharts().reflow();
                         }, 400);
 
